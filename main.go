@@ -64,7 +64,7 @@ func encrypt(publicKey [][]int, message string) ([]*big.Int, []*big.Int) {
 			c1[i].Add(c1[i], new(big.Int).Mul(aj, rj))
 		}
 
-		c2[i] = big.NewInt(int64(message[i]) + (q / 2) + r[i])
+		c2[i] = big.NewInt(int64(message[i]) + int64(q / 2) + int64(r[i]))
 	}
 
 	return c1, c2
