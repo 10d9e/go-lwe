@@ -20,10 +20,10 @@ func main() {
 	pk, sk := A, s // In practice, public key (pk) would be shared, and secret key (sk) kept secret
 
 	// Encryption
-	ciphertext := encrypt(pk, m)
+	ciphertext, ciphertext2 := encrypt(pk, m)
 
 	// Decryption
-	decryptedMessage := decrypt(sk, ciphertext)
+	decryptedMessage := decrypt(sk, ciphertext, ciphertext2)
 	fmt.Println("Decrypted Message:", decryptedMessage)
 }
 
